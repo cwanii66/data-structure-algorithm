@@ -1,6 +1,8 @@
 package test;
 
-public class Stack<Item> implements Iterable{
+import java.util.Iterator;
+
+public class Stack<Item> implements Iterable<Item>{
        private Node first;
        private int N;
        private class Node {
@@ -32,6 +34,7 @@ public class Stack<Item> implements Iterable{
 
        }
        @Override
-
-
+       public Iterator<Item> iterator() {
+              return null;
+       }
 }
