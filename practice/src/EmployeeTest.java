@@ -25,10 +25,14 @@ public class EmployeeTest {
 class Employee {
        // constructor
        public Employee(String n, double s, int year, int month, int day) {
-              name = n;
-              salary = s;
+              this.name = n;
+              this.salary = s;
               GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
-              hireDay = calendar.getTime();
+              this.hireDay = calendar.getTime();
+       }
+       public Employee() {
+              this.name = "";
+              this.salary = 0;
        }
        // a method
        public String getName() {
@@ -47,8 +51,25 @@ class Employee {
               double raise = this.salary * byPercent / 100;
               this.salary += raise;
        }
+
+       public static void main(String[] args) { // unit test
+              Employee e = new Employee("Harry", 5000, 1999, 11, 6);
+              System.out.println(e.getName() + " " + e.getSalary());
+       }
+
        // instance fields
        private String name;
        private double salary;
        private Date hireDay;
+       private int id;
+       // static field, belongs to class
+       private static int nextId = 1;
+
+       // object initialization block
+       //  block execute as long as constructing object
+       // common constructor ?(abnormal)
+       {
+              id = nextId;
+              nextId++;
+       }
 }
