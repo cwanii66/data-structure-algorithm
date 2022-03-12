@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/data-structure-algorithm.iml" filepath="$PROJECT_DIR$/.idea/data-structure-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa-test/dsa-test.iml" filepath="$PROJECT_DIR$/dsa-test/dsa-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/practice.iml" filepath="$PROJECT_DIR$/practice/practice.iml" />
     </modules>
   </component>
 </project>
