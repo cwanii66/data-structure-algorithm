@@ -60,6 +60,29 @@ class Employeeee extends Person {
               return String.format("an employee with a salary of $%.2f", salary);
        }
 
+       @Override
+       public boolean equals(Object otherObject) {
+              // a quick test to see if the objects are identical
+              if (this == otherObject) return true;
+
+              // must return false if the explicit parameter is null
+              if (otherObject == null) return false;
+
+              // if the class don't match, they can't be equal
+              if (getClass() != otherObject.getClass()) return false;
+
+              // if all subclasses have uniform semantics, use "instanceof"
+              // if (!( otherObject instanceof className)) return false;
+
+              // now we know otherObject is non-null Employee
+              Employeeee other = (Employeeee) otherObject;
+
+              // test whether the fields have identical values
+              return name.equals(other.name)
+                      && salary == other.salary
+                      && hireDay.equals(other.hireDay);
+       }
+
        public static void main(String[] args) { // unit test
               Employee e = new Employee("Harry", 5000, 1999, 11, 6);
               System.out.println(e.getName() + " " + e.getSalary());
@@ -68,6 +91,7 @@ class Employeeee extends Person {
        // instance fields
        private double salary;
        private Date hireDay;
+       private String name;
 }
 
 class Student extends Person {
