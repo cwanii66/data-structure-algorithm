@@ -1,5 +1,7 @@
 package equals;
 
+import java.util.ArrayList;
+
 public class Manager extends Employee {
        private double bonus;
 
@@ -35,5 +37,14 @@ public class Manager extends Employee {
        @Override
        public String toString() {
               return super.toString() + "[bonus=" + bonus + "]";
+       }
+
+       public static void main(String[] args) {
+              // pass Capacity
+              ArrayList<Manager> staff = new ArrayList<>(0);
+              staff.ensureCapacity(100);
+              staff.add(new Manager("Mr.D", 150000, 1988, 10,12));
+              System.out.println(staff.size());
+              staff.trimToSize();
        }
 }
