@@ -14,7 +14,7 @@ import javax.swing.Timer;
 
 public class innerClassTest {
        public static void main(String[] args) {
-              TalkingClock clock = new TalkingClock(1000, true);
+              TalkingClock clock = new TalkingClock();
               clock.start(1000, true);
 
               // keep program running until user selects "Ok"
@@ -27,18 +27,18 @@ public class innerClassTest {
  * A clock that prints the time in regular intervals.
  */
 class TalkingClock {
-       private int interval;
-       private boolean beep;
+//       private int interval;
+//       private boolean beep;
 
        /**
         * Constructs a talking clock
         * @param interval the interval between message (in milliseconds)
         * @param beep true if clock should beep
         */
-       public TalkingClock(int interval, boolean beep) {
-              this.interval = interval;
-              this.beep = beep;
-       }
+//       public TalkingClock(int interval, boolean beep) {
+//              this.interval = interval;
+//              this.beep = beep;
+//       }
        /**
         * Starts the clock
         */
@@ -49,6 +49,10 @@ class TalkingClock {
                             System.out.println("At the tone, the time is " + new Date());
                             if (beep) Toolkit.getDefaultToolkit().beep();
                      }
+
+                     // copy of outer and useful field
+//                     final boolean val$beep;
+//                     final TalkingClock this$0;
               }
 
               // 编写内部对象的构造器
