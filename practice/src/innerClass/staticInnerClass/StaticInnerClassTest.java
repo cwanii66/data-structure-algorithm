@@ -1,7 +1,5 @@
 package innerClass.staticInnerClass;
 
-import java.lang.reflect.Array;
-
 /**
  * This program demonstrates the use of static inner classes
  * @version 1.02
@@ -24,8 +22,9 @@ class ArrayAlg {
         * A pair floating-point numbers
         */
        public static class Pair {
-              private double first;
-              private double second;
+              // final Pair result
+              private final double first;
+              private final double second;
 
               /**
                * Constructs a pair from two floating-point number
