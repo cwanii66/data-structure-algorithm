@@ -47,6 +47,7 @@ class TraceHandler implements InvocationHandler {
               target = t;
        }
 
+       // runtime invoke
        public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
               // print implicit argument
               System.out.print(target);
