@@ -126,7 +126,7 @@ class WindowHandler extends StreamHandler {
               frame.setVisible(true);
               setOutputStream(new OutputStream() {
                      @Override
-                     public void write(int b) throws IOException {
+                     public void write(int b) {
                      } // not called
 
                      public void write(byte[] b, int off, int len) {
