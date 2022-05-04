@@ -7,9 +7,7 @@
  */
 package stack;
 
-import java.util.Stack;
-
-public class IntStack extends Stack<Integer> {
+public class IntStack implements Stack<Integer> {
 
     private final int[] ar;
     private int pos = 0;
@@ -37,8 +35,8 @@ public class IntStack extends Stack<Integer> {
     }
 
     @Override
-    public Integer push(Integer value) {
-        return ar[pos++] = value;
+    public void push(Integer value) {
+        ar[pos++] = value;
     }
 
     @Override

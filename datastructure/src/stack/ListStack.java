@@ -1,12 +1,10 @@
 package stack;
 
-import java.util.Stack;
-
 /**
  * A Linked list implementation of a stack
  */
 
-public class ListStack<T> extends Stack<T> implements Iterable<T> {
+public class ListStack<T> implements Iterable<T>, Stack<T> {
 
     private java.util.LinkedList<T> list = new java.util.LinkedList<>();
 
@@ -15,6 +13,7 @@ public class ListStack<T> extends Stack<T> implements Iterable<T> {
 
     // Create a Stack with an initial element
     public ListStack(T firstElem) {
+        this();
         push(firstElem);
     }
 
@@ -29,9 +28,8 @@ public class ListStack<T> extends Stack<T> implements Iterable<T> {
     }
 
     // Push an element on the stack
-    public T push(T elem) {
+    public void push(T elem) {
         list.addLast(elem);
-        return elem;
     }
 
     // Pop an element off the stack
